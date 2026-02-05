@@ -2,7 +2,7 @@ return {
   {
     'nvim-treesitter/nvim-treesitter',
     init = function()
-      require('nvim-treesitter.configs').setup {
+      require('nvim-treesitter').setup {
         -- List of parser names, or "all" (the five listed parsers should always be installed)
         ensure_installed = {
           "javascript",
