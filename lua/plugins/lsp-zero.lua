@@ -13,17 +13,6 @@ return {
         version = "1.32.0",
         config = function()
             require('mason-lspconfig').setup({
-                ensure_installed = { -- My language servers list
-                    'clangd',
-                    'lua_ls',
-                    'arduino_language_server',
-                    'pyright',
-                    'eslint',
-                    'ts_ls',
-                    'cssls',
-                    'html',
-                    'nil_ls',
-                },
                 handlers = {
                     function(server_name)
                         vim.lsp.config(server_name, {})
