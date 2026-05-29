@@ -85,13 +85,12 @@ return {
         'nvim-tree/nvim-tree.lua',
         keys = {},
         init = function()
-            -- disable netrw at the very start of your init.lua
             vim.g.loaded_netrw = 1
             vim.g.loaded_netrwPlugin = 1
-
-            -- set termguicolors to enable highlight groups
             vim.opt.termguicolors = true
-
+        end,
+        config = function()
+            vim.cmd([[set nosplitright]])
             require("nvim-tree").setup({
                 sort = {
                     sorter = "case_sensitive",
@@ -105,7 +104,7 @@ return {
                 },
                 filters = {
                     dotfiles = true,
-					git_ignored = false,
+                    git_ignored = false,
                 },
                 tab = {
                     sync = {
@@ -116,9 +115,6 @@ return {
             })
         end
     },
-    config = function()
-        vim.cmd([[set nosplitright]])
-    end,
     {'nvim-tree/nvim-web-devicons'}
 }
 

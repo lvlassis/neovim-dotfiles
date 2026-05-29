@@ -13,8 +13,10 @@ return {
 
   {
     "tinted-theming/tinted-nvim",
-    init = function()
-      require("tinted-colorscheme").setup("base16-ayu-dark")
-    end
+    lazy = false,
+    priority = 1000,
+    opts = {
+      default_scheme = "base16-ayu-dark",
+    }
   }
 }
