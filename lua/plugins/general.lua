@@ -4,8 +4,6 @@ return {
     {'tikhomirov/vim-glsl'},
     {'ryanoasis/vim-devicons'},
     {'DreamMaoMao/yazi.nvim'},
-    {'skywind3000/asynctasks.vim'},
-    {'skywind3000/asyncrun.vim'},
     {
       "karb94/neoscroll.nvim",
       config = function ()
