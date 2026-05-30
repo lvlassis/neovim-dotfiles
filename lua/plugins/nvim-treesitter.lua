@@ -1,11 +1,12 @@
+-- O Neovim 0.12+ tem suporte nativo ao Treesitter
+-- Usando tree-sitter-manager.nvim para gerenciar parsers automaticamente
+
 return {
   {
-    'nvim-treesitter/nvim-treesitter',
-    lazy = false,
-    build = ':TSUpdate',
+    "romus204/tree-sitter-manager.nvim",
     config = function()
-      require('nvim-treesitter').setup({
-        install = {
+      require("tree-sitter-manager").setup({
+        ensure_installed = {
           "javascript",
           "typescript",
           "html",
@@ -18,19 +19,12 @@ return {
           "c",
           "cpp",
           "go",
-        }
-      })
-      require('nvim-treesitter.configs').setup({
-        highlight = {
-          enable = true,
-          additional_vim_regex_highlighting = false,
+          "markdown",
+          "markdown_inline",
         },
+        auto_install = true, -- Instala automaticamente parsers para novos filetypes
+        highlight = true,    -- Ativa highlight (já é padrão no Neovim 0.12)
       })
-
-      -- Usar o treesitter como motor de dobras
-      vim.opt.foldmethod = 'expr'
-      vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-      vim.opt.foldlevel = 99 -- Abrir tudo por padrão
     end
   }
 }
