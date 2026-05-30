@@ -25,7 +25,10 @@ return {
 
 
     -- Lsp do Neovim
-    {'neovim/nvim-lspconfig'},
+    {
+      'neovim/nvim-lspconfig',
+      dependencies = { "NotAShelf/direnv.nvim" }
+    },
 
     -- Nvim-cmp. Autosugestion e completion
      { -- optional cmp completion source for require statements and module annotations

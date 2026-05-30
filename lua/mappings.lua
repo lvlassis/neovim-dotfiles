@@ -15,29 +15,11 @@ vim.keymap.set('n', '<C-s>', ':w<CR>', { desc = 'Save file' })
 
 -- Makefile setup mappings
 vim.keymap.set('n', '<F7>', ':!make test<CR>', { desc = 'Run make test' })
-vim.keymap.set('n', '<F6>', ':w<CR>:!clear<CR>:!make compile<CR>', { desc = 'Save and compile' })
-vim.keymap.set('n', '<F5>', ':!make run<CR>', { desc = 'Run make' })
-
--- AsyncTask mappings
--- vim.keymap.set('n', '<leader>rr', ':w<CR>:AsyncTask project-run<CR>', { desc = 'Run project' })
--- vim.keymap.set('n', '<leader>rb', ':w<CR>:AsyncTask project-build<CR>', { desc = 'Build project' })
--- vim.keymap.set('n', '<leader>rt', ':w<CR>:AsyncTask project-test<CR>', { desc = 'Test project' })
--- vim.keymap.set('n', '<leader>rm', ':w<CR>:AsyncTask project-monitor<CR>', { desc = 'Monitor project' })
+-- vim.keymap.set('n', '<F6>', ':w<CR>:!clear<CR>:!make compile<CR>', { desc = 'Save and compile' })
+-- vim.keymap.set('n', '<F5>', ':!make run<CR>', { desc = 'Run make' })
 
 -- Executar arquivo com python
-vim.keymap.set('n', '<leader><F5>p', ':!rifle -w python %<CR>', { desc = 'Run with python' })
-
--- ========================================
--- TERMINAL MAPPINGS
--- ========================================
-
--- Abrir Terminal ah lá VSCode
-vim.keymap.set('n', '<leader>h', ':ToggleTerm direction=horizontal<CR>', { desc = 'Toggle terminal horizontal' })
-vim.keymap.set('n', '<leader>a', ':ToggleTerm<CR>', { desc = 'Toggle terminal' })
-vim.keymap.set('n', '<leader>T', ':ToggleTerm direction=float<CR>', { desc = 'Toggle terminal float' })
-
--- Terminal ESC goes to normal mode
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+-- vim.keymap.set('n', '<leader><F5>p', ':!rifle -w python %<CR>', { desc = 'Run with python' })
 
 -- ========================================
 -- TEXT MODE MAPPINGS
