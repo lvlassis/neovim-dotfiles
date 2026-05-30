@@ -26,6 +26,11 @@ return {
           additional_vim_regex_highlighting = false,
         },
       })
+
+      -- Usar o treesitter como motor de dobras
+      vim.opt.foldmethod = 'expr'
+      vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+      vim.opt.foldlevel = 99 -- Abrir tudo por padrão
     end
   }
 }
