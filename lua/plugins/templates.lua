@@ -1,6 +1,6 @@
 return {
   { 
-    'glepnir/template.nvim', 
+    'lvlassis/template.nvim', 
     cmd = {'Template','TemProject'}, 
     config = function()
       require('template').setup({
