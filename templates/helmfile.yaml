@@ -1,0 +1,22 @@
+environments:
+  homolog:
+    values:
+      - ../../environments/homolog.yaml
+  production:
+    values:
+      - ../../environments/production.yaml
+
+---
+
+repositories:
+  - name: <repository>
+    url: <repository_url>
+
+releases:
+  - name: <release>
+    namespace: <namespace>
+    chart: <repository>/<release>
+    version: <version>
+    installed: true
+    values:
+      - values.yaml

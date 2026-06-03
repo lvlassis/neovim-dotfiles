@@ -19,6 +19,8 @@ return {
           "c",
           "cpp",
           "go",
+          "gotmpl",
+          "yaml",
           "markdown",
           "markdown_inline",
         },

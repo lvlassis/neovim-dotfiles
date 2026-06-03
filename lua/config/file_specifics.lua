@@ -11,6 +11,10 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.filetype.add({
   extension = {
     launch = "xml",
+    gotmpl = "gotmpl",
+  },
+  pattern = {
+    [".*%.yaml%.gotmpl"] = "gotmpl",
   },
 })
 
