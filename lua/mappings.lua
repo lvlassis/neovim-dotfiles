@@ -38,6 +38,12 @@ vim.keymap.set('n', '<F12>', ':vsp ~/.config/nvim/vimrc.vim<CR>', { desc = 'Open
 vim.keymap.set('n', '<F1>', ':vsp makefile<CR>', { desc = 'Open makefile' })
 
 -- ========================================
+-- LSP MAPPINGS
+-- ========================================
+
+vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { desc = 'Rename symbol' })
+
+-- ========================================
 -- EDITING MAPPINGS
 -- ========================================
 
