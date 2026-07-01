@@ -15,6 +15,11 @@ vim.filetype.add({
   },
   pattern = {
     [".*%.yaml%.gotmpl"] = "gotmpl",
+    [".*%.ya?ml"] = function(path)
+      if path:match("[/\\]k8s[/\\]") or path:match("[/\\]chart[/\\]") then
+        return "gotmpl"
+      end
+    end,
   },
 })
 

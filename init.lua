@@ -21,4 +21,4 @@ require('config.file_specifics')
 -- Mappings centralizados
 require('mappings')
 
-
+vim.opt.exrc = true
