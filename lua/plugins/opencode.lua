@@ -1,5 +1,6 @@
 return {
   "sudo-tee/opencode.nvim",
+  enabled = require("config.work_mode").is_work(), -- Only enable if in work mode
   dependencies = {
     {
       "MeanderingProgrammer/render-markdown.nvim",

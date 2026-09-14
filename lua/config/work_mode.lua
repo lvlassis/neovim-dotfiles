@@ -8,7 +8,7 @@ local M = {}
 -- codecompanion.nvim no trabalho, via gateway interno).
 function M.is_work()
   local value = vim.env.NVIM_WORK_MODE
-  return value ~= nil and value ~= ""
+  return value == "servico-ti"
 end
 
 return M

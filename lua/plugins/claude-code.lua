@@ -1,6 +1,6 @@
 return {
   "greggh/claude-code.nvim",
-  enabled = false,
+  enabled = not require("config.work_mode").is_work(), -- Only enable if not in work mode
   dependencies = {
     "nvim-lua/plenary.nvim", -- Required for git operations
   },
