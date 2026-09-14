@@ -110,8 +110,6 @@ vim.keymap.set('n', '<Leader>df', ':!dragon-drop %<CR>', { desc = 'Dragon drop c
 -- Beautifier
 vim.keymap.set('n', '<F9>', ':Neoformat<CR>', { desc = 'Format code' })
 
--- Claude Code
-vim.keymap.set('n', '<Leader>i', ':ClaudeCode<CR>', { desc = 'Open Claude Code' })
 
 -- ========================================
 -- TELESCOPE MAPPINGS
