@@ -21,6 +21,13 @@ return {
       server = {
         password = "nvim-local-opencode",
       },
+      ui = {
+        input = {
+          text = {
+            wrap = true,
+          },
+        },
+      },
     })
 
     -- Garante que o conceal funcione nos buffers de saída do OpenCode
@@ -34,6 +41,10 @@ return {
         end
         vim.opt_local.conceallevel = 2
         vim.opt_local.concealcursor = "nc" -- oculta marcadores nos modos normal e command
+        if args.match == "opencode_output" then
+          vim.opt_local.wrap = true
+          vim.opt_local.linebreak = true -- quebra nas palavras, não no meio delas
+        end
       end,
     })
 
