@@ -28,9 +28,17 @@ return {
           -- @property (yaml keys, fields) fica branco no base16; usa red (base08) do tema ativo.
           vim.api.nvim_set_hl(0, "@property", { fg = aliases.red })
 
-          -- H3 do render-markdown (usado no opencode_output) herda @markup.heading.3.markdown,
-          -- que em alguns esquemas fica cinza e com contraste muito fraco. Fixa uma cor legível.
-          vim.api.nvim_set_hl(0, "RenderMarkdownH3", { fg = aliases.cyan, bold = true })
+          -- H3+ do render-markdown (usado no opencode_output) herdam @markup.heading.N.markdown,
+          -- que em alguns esquemas fica cinza e com contraste muito fraco. Fixa cores legíveis.
+          local heading_colors = {
+            [3] = aliases.cyan,
+            [4] = aliases.green,
+            [5] = aliases.orange,
+            [6] = aliases.yellow,
+          }
+          for level, color in pairs(heading_colors) do
+            vim.api.nvim_set_hl(0, "RenderMarkdownH" .. level, { fg = color, bold = true })
+          end
         end
       end
 
