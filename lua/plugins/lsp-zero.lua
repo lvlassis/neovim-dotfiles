@@ -18,6 +18,12 @@ return {
                         vim.lsp.config(server_name, {})
                         vim.lsp.enable(server_name)
                     end,
+                    clangd = function()
+                        vim.lsp.config('clangd', {
+                            cmd = { 'clangd', '--query-driver=*' },
+                        })
+                        vim.lsp.enable('clangd')
+                    end,
                 },
             })
         end,
